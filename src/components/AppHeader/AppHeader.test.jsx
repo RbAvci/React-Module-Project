@@ -2,8 +2,16 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import AppHeader from "./AppHeader.jsx";
 
-describe("App Header", () => {
-  it("should have a test, please write one", () => {
-    return true;
+describe('AppHeader', () => {
+  test('renders the logo and heading correctly', () => {
+    render(<AppHeader />);
+
+   
+    const logoImage = screen.getByAltText('hotel Logo');
+    expect(logoImage).toBeInTheDocument();
+
+   
+    const headingText = screen.getByText('CYF Hotel');
+    expect(headingText).toBeInTheDocument();
   });
 });
