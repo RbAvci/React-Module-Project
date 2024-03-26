@@ -13,7 +13,7 @@ const Bookings = () => {
 
   return (
     <main className="bookings">
-      <Search search={search} />
+      <Search onSubmit={search} />
 
       <SearchResults bookings={bookings} />
     </main>
