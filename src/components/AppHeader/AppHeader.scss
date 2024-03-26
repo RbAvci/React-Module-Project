@@ -1,12 +1,22 @@
 .app {
-  &__header{
+  &__header {
     display: flex;
     justify-content: flex-start;
+    background-color: #003b7a;
+    margin-bottom: 2rem;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
   }
   &__heading {
     display: flex;
     place-content: center;
     margin: auto;
+    font-family: "McLaren", cursive;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #ccc;
+    margin-right: 0;
   }
   &__logo {
     max-width: 100px;

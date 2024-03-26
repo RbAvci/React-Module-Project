@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import CustomerProfile from "../CustomerProfile/CustomerProfile";
+import "./SearchResults.scss";
 
 const SearchResults = ({ bookings }) => {
   const [selectedProfileId, setSelectedProfile] = useState(null);
@@ -11,8 +12,8 @@ const SearchResults = ({ bookings }) => {
     setSelectedProfile(Number(e.target.value));
   }
   return (
-    <>
-      <table>
+    <div className="table-container">
+      <table className="table">
         <thead>
           <TableHead />
         </thead>
@@ -23,7 +24,7 @@ const SearchResults = ({ bookings }) => {
         </tbody>
       </table>
       {selectedProfileId ? <CustomerProfile id={selectedProfileId} /> : null}
-    </>
+    </div>
   );
 };
 

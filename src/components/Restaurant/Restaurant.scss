@@ -1,0 +1,37 @@
+/* restaurant.css */
+.restaurant {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #013b7a;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.restaurant__heading {
+  font-size: 24px;
+  color: #013b7a;
+  margin-bottom: 15px;
+}
+
+.restaurant__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Styles for the Order component */
+.order {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.order__type {
+  font-size: 18px;
+  color: #013b7a;
+}
