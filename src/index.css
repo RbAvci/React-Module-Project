@@ -45,8 +45,9 @@ button:focus-visible {
 body {
   font: var(--font);
   margin: 0;
-  display: grid;
-  place-all: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
   color: var(--color--ink);

@@ -22,4 +22,15 @@
   &__logo {
     max-width: 100px;
   }
+  &__hotel {
+    background-color: aliceblue;
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.hotel-icon {
+  max-width: 100px;
 }
