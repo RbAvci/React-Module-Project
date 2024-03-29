@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Search from "../Search/Search";
 import FakeBookings from "../../data/fakeBookings.json";
 import SearchResults from "../SearchResults/SearchResults";
 import AddBookingForm from "../AddBookingForm/AddBookingForm";
 
 const Bookings = () => {
-  const [bookings, setBookings] = useState(FakeBookings);
+  const [bookings, setBookings] = useState([]);
+
+  useEffect(() => {
+    fetchBookings();
+  }, []);
+
+  const fetchBookings = () => {
+    try {
+      // Replace with actual API call
+      setBookings(FakeBookings);
+    } catch (error) {
+      console.error("Error fetching bookings:", error.message);
+    }
+  };
 
   const search = (searchVal) => {
     const filteredBookings = FakeBookings.filter(
@@ -18,8 +31,7 @@ const Bookings = () => {
 
   return (
     <main className="bookings">
-      <Search className="searchBtn" search={search} />
-
+      <Search search={search} />
       <SearchResults bookings={bookings} />
       <AddBookingForm bookings={bookings} setBookings={setBookings} />
     </main>
