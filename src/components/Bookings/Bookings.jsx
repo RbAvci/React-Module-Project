@@ -25,7 +25,7 @@ const Bookings = () => {
 
   return (
     <main className="bookings">
-      <Search search={search} />
+      <Search onSubmit={search} />
       <SearchResults bookings={bookings} />
       <AddBookingForm bookings={bookings} setBookings={setBookings} />
     </main>
