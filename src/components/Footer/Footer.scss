@@ -1,19 +1,21 @@
 footer {
-  background-color: var(--color--accent);
-  color: var(--color--paper);
-  max-width: var(--space--container);
-  margin: auto;
-  padding: var(--space--gap);
+  background-color: #003b7a;
+  color: #ccc;
+
+  padding: 1rem;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
-  border-radius: var(--border-radius);
 
   position: fixed;
   bottom: 0px;
   right: 0px;
   left: 0px;
+}
+
+footer p {
+  color: #ccc;
 }
 .addressInfo {
   display: flex;

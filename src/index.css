@@ -15,6 +15,7 @@
 a {
   color: currentColor;
 }
+
 a:hover,
 a:focus {
   color: var(--color--accent);
@@ -23,7 +24,7 @@ a:focus {
 button {
   border-radius: var(--border-radius);
   border: var(--border);
-  border-color: var(--color--accent);
+  border-color: #ccc;
   padding: var(--space--m) var(--space--l);
   font: var(--font);
   color: var(--color--ink);
@@ -31,9 +32,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: var(--color--ink);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -42,8 +45,9 @@ button:focus-visible {
 body {
   font: var(--font);
   margin: 0;
-  display: grid;
-  place-all: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
   color: var(--color--ink);
