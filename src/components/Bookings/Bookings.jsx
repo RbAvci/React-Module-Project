@@ -5,14 +5,21 @@ import AddBookingForm from "../AddBookingForm/AddBookingForm";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
+  const [loading, setLoading] = useState(true); // Define loading state
 
   useEffect(() => {
     console.log("Component is mounted");
     fetch("https://nw6-cyf-hotel.glitch.me/fakebookings")
       .then(response => response.json())
-      .then(data => setBookings(data))
-      .catch(error => console.error("Error fetching bookings:", error));
-  }, []);
+      .then(data => {
+        setBookings(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error("Error fetching bookings:", error);
+        setLoading(false);
+      });
+  }, []); 
 
   const search = (searchVal) => {
     const filteredBookings = bookings.filter(
@@ -26,8 +33,15 @@ const Bookings = () => {
   return (
     <main className="bookings">
       <Search onSubmit={search} />
-      <SearchResults bookings={bookings} />
-      <AddBookingForm bookings={bookings} setBookings={setBookings} />
+      {/* Conditional rendering based on loading state */}
+      {loading && <p>Loading...</p>}
+      {!loading && (
+        <>
+          <SearchResults bookings={bookings} />
+          <AddBookingForm bookings={bookings} setBookings={setBookings} />
+        </>
+      )}
+
     </main>
   );
 };
