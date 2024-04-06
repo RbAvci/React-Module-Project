@@ -32,7 +32,7 @@ const Bookings = () => {
 
   return (
     <main className="bookings">
-      <Search search={search} />
+      <Search onSubmit={search} />
       {/* Conditional rendering based on loading state */}
       {loading && <p>Loading...</p>}
       {!loading && (
@@ -41,6 +41,7 @@ const Bookings = () => {
           <AddBookingForm bookings={bookings} setBookings={setBookings} />
         </>
       )}
+
     </main>
   );
 };

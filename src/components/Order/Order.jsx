@@ -9,9 +9,9 @@ export default function Order({ orderType }) {
   };
 
   return (
-    <li className="restaurant__item">
+    <li className="order">
       {orderType}: {orders}
-      <RestaurantButton handleAddOrder={handleAddOrder} />
+      <RestaurantButton className="order-button" handleAddOrder={handleAddOrder} />
     </li>
   );
 }

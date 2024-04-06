@@ -9,3 +9,49 @@
     margin-bottom: 5px;
   }
 }
+
+
+.order {
+  margin-bottom: 10px;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.order__info {
+  font-size: 18px;
+  color: #333;
+}
+
+.order__count {
+  font-size: 18px;
+  color: #555;
+  margin-left: 10px;
+}
+
+.order__button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order__button:hover {
+  background-color: #0056b3;
+}
+
+.order__button:focus {
+  outline: none;
+}
+
+.order__button:active {
+  background-color: #0056b3;
+}
